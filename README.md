@@ -10,11 +10,11 @@ Build installtest APK.
 
 ./gradlew clean assemble
 
-Start AVD with writable system partition
+Start AVD with writable system partition.
 
 > sdk/tools/emulator -writable-system -avd Android_TV_1080p_API_25 -no-snapshot-load -qemu
 
-Install installtest as priviledged APK
+Install installtest as priviledged APK.
 
 > adb root
 > adb remount
