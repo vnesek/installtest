@@ -65,6 +65,34 @@ Check if mybigapk is installed
 drwxr-xr-x  4 system system 4096 2018-04-10 12:04 net.instantcom.fms.android.mybigapk-1
 ```
 
+Check mybigapk version:
+
+> adb shell dumpsys | grep -A18 "Package \[net.instantcom.fms.android.mybigapk\]"
+
+```
+Package [net.instantcom.fms.android.mybigapk] (f48b232):
+    userId=10047
+    pkg=Package{ceb4b83 net.instantcom.fms.android.mybigapk}
+    codePath=/data/app/net.instantcom.fms.android.mybigapk-2
+    resourcePath=/data/app/net.instantcom.fms.android.mybigapk-2
+    legacyNativeLibraryDir=/data/app/net.instantcom.fms.android.mybigapk-2/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=2 minSdk=25 targetSdk=26
+    versionName=2.0
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{b834100 net.instantcom.fms.android.mybigapk}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ RESIZEABLE_ACTIVITIES ]
+    dataDir=/data/user/0/net.instantcom.fms.android.mybigapk
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2018-04-10 12:15:26
+    firstInstallTime=2018-04-10 12:14:16
+```
+
+Check that version code is as expected.
+
 Uninstall it.
 
 > adb uninstall net.instantcom.fms.android.mybigapk
