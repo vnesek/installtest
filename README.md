@@ -5,6 +5,7 @@ How to test using emulator
 Clone git repository.
 
 > git clone https://github.com/vnesek/installtest.git
+
 > cd installtest
 
 Build *installtest* APK.
@@ -18,13 +19,17 @@ Start AVD with writable system partition.
 Install *installtest* as priviledged APK.
 
 > adb root
+
 > adb remount
+
 > adb push ./app/build/outputs/apk/debug/app-debug.apk /system/priv-app/InstallTest/app-debug.apk
+
 > adb reboot
 
 Launch *installtest* in debugger or using adb.
 
 > adb shell am start -n net.instantcom.installtest/.InstallActivity
+
 > adb logcat | grep Install
 
 APK will launch with two buttons. You can try installation of sample mybigapk version 1 and upgraded
